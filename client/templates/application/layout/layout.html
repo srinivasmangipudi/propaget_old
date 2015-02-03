@@ -1,0 +1,10 @@
+<template name="layout">
+	<div class="container">
+		{{> header}}
+		{{> meteorErrors}}
+		<div id="main" class="row-fluid page-wrap">
+			{{> yield}}
+		</div>
+		{{> footer}}
+	</div>
+</template>
