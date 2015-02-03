@@ -1,13 +1,19 @@
 <template name="dealsList">
-	<div class="deals">
-		{{#each dilemmasWithRank}}
-			{{> dilemmaItem}}
-		{{/each}}
+	{{#if currentUser}}
+		<div class="deals">
+			{{#each dilemmasWithRank}}
+				{{> dilemmaItem}}
+			{{/each}}
 
-		{{#if nextPath}}
-			<a class="load-more" href="{{nextPath}}">Load More</a>
-		{{else}}
+			{{#if nextPath}}
+				<a class="load-more" href="{{nextPath}}">Load More</a>
+			{{else}}
 
-		{{/if}}
-	</div>
+			{{/if}}
+		</div>	
+	{{else}}
+		<p style="color: #33CCFF; text-align: center;"><b><i>Please Sign In/Join to Propaget!</i></b></p>
+	{{/if}}
+
+
 </template>
