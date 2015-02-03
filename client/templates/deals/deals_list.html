@@ -1,0 +1,13 @@
+<template name="dealsList">
+	<div class="deals">
+		{{#each dilemmasWithRank}}
+			{{> dilemmaItem}}
+		{{/each}}
+
+		{{#if nextPath}}
+			<a class="load-more" href="{{nextPath}}">Load More</a>
+		{{else}}
+
+		{{/if}}
+	</div>
+</template>
