@@ -22,15 +22,13 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="nav navbar-nav">
-
-					<li class="{{activeRouteClass 'home' 'newDeals'}}">
-						<a href="#">New Deals</a>
-					</li>
-					<li class="{{activeRouteClass 'bigDeals'}}">
-						<a href="#">Big Deals</a>
-					</li>
-
-					{{#if currentUser}}					
+					{{#if currentUser}}		
+						<li class="{{activeRouteClass 'home' 'newLeads'}}">
+							<a href="#">Leads</a>
+						</li>
+						<li class="">
+							<a href="#">Offers</a>
+						</li>
 						<li class="{{activeRouteClass 'dilemmaSubmit'}}">
 							<a href="#" style="color:#33CCFF;">Create Deal</a>
 						</li>

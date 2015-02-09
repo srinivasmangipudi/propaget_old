@@ -1,8 +1,8 @@
 <template name="dealsList">
 	{{#if currentUser}}
 		<div class="deals">
-			{{#each dilemmasWithRank}}
-				{{> dilemmaItem}}
+			{{#each dealsWithRank}}
+				{{> dealItem}}
 			{{/each}}
 
 			{{#if nextPath}}
