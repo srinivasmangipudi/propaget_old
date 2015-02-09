@@ -1,0 +1,19 @@
+<template name="leadsList">
+	{{#if currentUser}}
+		<div class="leads">
+			{{#each leadsWithRank}}
+				{{> leadItem}}
+			{{/each}}
+
+			{{#if nextPath}}
+				<a class="load-more" href="{{nextPath}}">Load More</a>
+			{{else}}
+
+			{{/if}}
+		</div>	
+	{{else}}
+		<p style="color: #33CCFF; text-align: center;"><b><i>Please Sign In/Join to Propaget!</i></b></p>
+	{{/if}}
+
+
+</template>
