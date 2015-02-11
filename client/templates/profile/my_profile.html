@@ -12,4 +12,15 @@
 	    	I am a Client
 	  </label>
 	</div>
+	
+	<div>
+		{{#if isAgentProfile}}
+			{{> agentProfile}}
+		{{/if}}
+
+		{{#if isClientProfile}}
+			{{> clientProfile}}
+		{{/if}}
+	</div>
+
 </template>
