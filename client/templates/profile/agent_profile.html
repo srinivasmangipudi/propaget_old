@@ -1,3 +1,19 @@
 <template name="agentProfile">
-	Here is the agent profile
+	<form class="main form">
+		<div class="form-group {{errorClass 'experience'}}">
+			<label class="control-label" for="experience">Experience</label>
+			<div class="controls">
+				<input name="experience" id="experience" type="text" value="" placeholder="Please describe your key experience" class="form-control" maxlength="100"/>
+				<span class="help-block">{{errorMessage 'experience'}}</span>
+			</div>
+		</div>
+		<div class="form-group {{errorClass 'summary'}}">
+			<label class="control-label" for="summary">Summary</label>
+			<div class="controls">
+				<textarea name="summary" id="summary" type="text" value="" placeholder="Please give a short summary about yourself" class="form-control" maxlength="255"></textarea>
+				<span class="help-block">{{errorMessage 'summary'}}</span>
+			</div>
+		</div>
+		<input type="submit" value="Submit" class="btn btn-primary"/>
+	</form>
 </template>

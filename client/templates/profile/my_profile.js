@@ -10,7 +10,7 @@ Template.myProfile.rendered = function() {
 Template.myProfile.helpers({
 	isAgentProfile:function() {
 		var usertype = Session.get("usertype");
-		console.log(usertype);
+		//console.log(usertype);
 		if(usertype === "Agent")
 			return true;
 		else 
@@ -19,7 +19,7 @@ Template.myProfile.helpers({
 
 	isClientProfile:function() {
 		var usertype = Session.get("usertype");
-		console.log(usertype);
+		//console.log(usertype);
 		if(usertype === "Client")
 			return true;
 		else 
@@ -30,11 +30,11 @@ Template.myProfile.helpers({
 
 Template.myProfile.events({
 	'click .agentRadio': function(e) {
-		console.log("Show Agent registration form");
+		//console.log("Show Agent registration form");
 		Session.set("usertype", "Agent");
 	},
 	'click .clientRadio': function(e) {
-		console.log("Show Client registration form");
+		//console.log("Show Client registration form");
 		Session.set("usertype", "Client");
 	},
 
