@@ -1,6 +1,14 @@
+//Counts helper by tmeasday:publish-counts package
+Meteor.publish('leadsCount', function(agentId) {
+	check(agentId, String);
+	Counts.publish(this, 'leadsCount', Leads.find({agentId: agentId}), { /*nonReactive: true*/ });
+	return Posts.find({}, { limit: 10 });
+});
+
 Meteor.publish("directory", function (id) {
   return Meteor.users.find({_id:id}, {fields: { emails: 1,
 												profile: 1,
+												usertype: 1,
 												"services.facebook.id": 1,
 												"services.facebook.email": 1,
 												"services.twitter.screenName": 1,
@@ -13,6 +21,7 @@ Meteor.publish('singleUser', function(id) {
 	check(id, String);
 	return Meteor.users.find({_id:id}, {fields: { emails: 1,
 												profile: 1,
+												usertype: 1,
 												"services.facebook.id": 1,
 												"services.facebook.email": 1,
 												"services.twitter.screenName": 1,
