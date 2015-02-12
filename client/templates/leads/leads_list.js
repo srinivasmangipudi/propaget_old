@@ -1,5 +1,5 @@
 Template.leadsList.rendered = function() {
-    //console.log(this.data);
+    console.log(this.data);
     //var controller = Router.current();
     //console.log(controller.params.tagName);
 };

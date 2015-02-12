@@ -1,4 +1,5 @@
 Template.myProfile.created = function() {
+	console.log(this.data);
 };
 
 Template.myProfile.rendered = function() {
@@ -8,6 +9,13 @@ Template.myProfile.rendered = function() {
 };
 
 Template.myProfile.helpers({
+	usertypeRegistered: function() {
+		var usertype = Session.get("usertype");
+		if(usertype)
+			return true;
+		else 
+			return false;		
+	},
 	isAgentProfile:function() {
 		var usertype = Session.get("usertype");
 		//console.log(usertype);

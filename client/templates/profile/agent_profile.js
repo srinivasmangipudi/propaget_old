@@ -24,17 +24,26 @@ Template.myProfile.events({
 		var agentProfile = {
 			experience: $(e.target).find('[name=experience]').val(),
 			summary: $(e.target).find('[name=summary]').val(),
-			userId: Meteor.userId()
+			userId: Meteor.userId(),
+			usertype: Session.get("usertype"),
 		};
 
 		console.log(agentProfile);
 
 		var errors = validateAgentProfile(agentProfile);
-		if(errors.experience || errors.summary || errors.user)
+		if(errors.experience || errors.summary || errors.user || errors.usertype)
 			return Session.set('agentProfileSubmitErrors', errors);
 		else
 			Session.set('agentProfileSubmitErrors', {});
 
 		console.log("All checks fine! Go save the profile >");
+
+		Meteor.call('agentProfileCreate', agentProfile, function(error, result)
+		{
+			if(error)
+				return throwError(error.reason);
+
+			console.log("Usertype updated. Now update the agent profile.");
+		});
 	}
 });
