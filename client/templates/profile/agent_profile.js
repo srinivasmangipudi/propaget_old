@@ -25,13 +25,12 @@ Template.myProfile.events({
 			experience: $(e.target).find('[name=experience]').val(),
 			summary: $(e.target).find('[name=summary]').val(),
 			userId: Meteor.userId(),
-			usertype: Session.get("usertype"),
 		};
 
 		console.log(agentProfile);
 
 		var errors = validateAgentProfile(agentProfile);
-		if(errors.experience || errors.summary || errors.user || errors.usertype)
+		if(errors.experience || errors.summary || errors.userId)
 			return Session.set('agentProfileSubmitErrors', errors);
 		else
 			Session.set('agentProfileSubmitErrors', {});

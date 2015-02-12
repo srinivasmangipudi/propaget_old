@@ -13,7 +13,7 @@ Template.dashboard.rendered = function() {
 };
 
 Template.dashboard.helpers({
-	usertype: function() {
+	/*usertype: function() {
 		if(this.ready && this.user && this.user.usertype)
 			return this.user.usertype;
 		else if(this.ready && !this.user.usertype)
@@ -21,7 +21,7 @@ Template.dashboard.helpers({
 			return null;
 			//Router.go('myProfile', {user: this.user});
 		}
-	},
+	},*/
 	user: function() {
 		console.log("user helper");
 		console.log(this.user);

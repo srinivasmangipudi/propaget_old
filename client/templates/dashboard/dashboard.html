@@ -1,7 +1,7 @@
 <template name="dashboard">
 
 	{{#if user}}
-		{{#if usertype}}
+		{{#if isInRole 'Agent' 'Client'}}
 			<div>
 				<p style="color: #3CAB78; text-align: center; font-size: xx-large;">Dashboard</p>
 			</div>
