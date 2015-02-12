@@ -1,3 +1,12 @@
 <template name="clientProfile">
-	Here is the client profile
+	<form class="main form">
+		<div class="form-group {{errorClass 'information'}}">
+			<label class="control-label" for="information">Information</label>
+			<div class="controls">
+				<textarea name="information" id="information" type="text" value="" placeholder="Please provide some information about yourself" class="form-control" maxlength="255"></textarea>
+				<span class="help-block">{{errorMessage 'information'}}</span>
+			</div>
+		</div>
+		<input type="submit" value="Submit" class="btn btn-primary"/>
+	</form>
 </template>

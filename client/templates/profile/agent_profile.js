@@ -17,7 +17,7 @@ Template.agentProfile.helpers({
 	},
 });
 
-Template.myProfile.events({
+Template.agentProfile.events({
 	'submit form': function(e) {
 		e.preventDefault();
 
