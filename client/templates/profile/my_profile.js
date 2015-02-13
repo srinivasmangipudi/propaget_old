@@ -1,5 +1,6 @@
 Template.myProfile.created = function() {
 	console.log(this.data);
+	Session.set("usertype", null);
 };
 
 Template.myProfile.rendered = function() {

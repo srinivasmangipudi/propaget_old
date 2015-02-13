@@ -1,9 +1,9 @@
 if(Meteor.users.find().count() === 0)
 {
+	/*
 	//create test users
 	var userClientId = Meteor.users.insert({
 		username: "TestClient",
-		usertype: "Client",
 		password: "123123",
 		profile: {name: "TestUser Client"}
 	});
@@ -19,7 +19,6 @@ if(Meteor.users.find().count() === 0)
 
 	var userAgentId = Meteor.users.insert({
 		username: "TestAgent",
-		usertype: "Agent",
 		password: "123123",
 		profile: {name: "TestUser Agent"}
 	});
@@ -48,4 +47,5 @@ if(Meteor.users.find().count() === 0)
 			handshake: z===0 ? true : false
 		});
 	}
+	*/
 }
