@@ -14,5 +14,13 @@ Template.dashboard.helpers({
 		console.log("user helper");
 		console.log(this.user);
 		return this.user ? this.user : null;
-	}
+	},
+	agent: function() {
+		return Agents.findOne({userId: this.user._id});
+		//return this.agent ? this.agent : null;
+	},
+	client: function() {
+		return Clients.findOne({userId: this.user._id});
+		//return this.client ? this.client : null;
+	},
 });

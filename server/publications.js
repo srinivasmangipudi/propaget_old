@@ -5,6 +5,55 @@ Meteor.publish('leadsCount', function(agentId) {
 	return Posts.find({}, { limit: 10 });
 });
 
+//composite publications - special package
+//https://github.com/englue/meteor-publish-composite
+Meteor.publishComposite('clientCompositeDetails', function(userId) {
+    return {
+        find: function() {
+            // Find user
+            return Client.find({ userId: userId }, { limit: 1 });
+        },
+        children: [
+            {
+				find: function(client) {
+					return Meteor.users.find(
+						{ _id: client.userId },
+						{ limit: 1, fields: { 
+							emails: 1,
+							profile: 1,
+							"services.facebook.id": 1,
+							"services.facebook.email": 1,
+							"services.twitter.screenName": 1,
+							"services.twitter.profile_image_url": 1,
+							"services.google.email": 1,
+							"services.google.picture": 1 } });
+						}
+						},
+        ]
+    };
+});
+
+Meteor.publishComposite('clientCompositeDetails1', function(userId) {
+    return {
+        find: function() {
+            // Find user
+            return Meteor.users.find({ _id: userId }, { limit: 1 });
+        },
+        children: [
+            {
+				find: function(user) {
+					return Clients.find(
+						{ userId: user._id },
+						{ limit: 1, fields: { 
+							userId: 1,
+							information: 1 
+							} });
+						}
+						},
+        ]
+    };
+});
+
 Meteor.publish("directory", function (id) {
   return Meteor.users.find({_id:id}, {fields: { emails: 1,
 												profile: 1,
@@ -43,7 +92,7 @@ Meteor.publish('singleClient', function(id) {
 
 //get single client by userid
 Meteor.publish('singleClientByUserId', function(userId) {
-	check(userId, String);
+	//check(userId, String);
 	return Clients.find({userId: userId});
 });
 

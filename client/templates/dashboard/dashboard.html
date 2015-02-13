@@ -4,6 +4,16 @@
 		{{#if isInRole 'Client, Agent'}}
 			<div>
 				<p style="color: #3CAB78; text-align: center; font-size: xx-large;">Dashboard</p>
+				{{#if isInRole 'Agent'}}
+					<p>AgentDetails:</p>
+					<p>{{agent.experience}}</p>
+					<p>{{agent.summary}}</p>
+						
+				{{/if}}
+				{{#if isInRole 'Client'}}
+					<p>ClientDetails:</p>
+					<p>{{client.information}}</p>
+				{{/if}}
 			</div>
 		{{else}}
 			{{> myProfile}}	
