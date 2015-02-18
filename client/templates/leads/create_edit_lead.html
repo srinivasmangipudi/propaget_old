@@ -1,0 +1,52 @@
+<template name="createEditLead">
+  <div id="create-lead-wrapper" style="{{#if lead}}display: block;{{else}} display: none;{{/if}}">
+	<p><h3>{{title}}</h3></p>
+	<form id="create-lead-form">
+  	<div class="form-group {{errorClass 'title'}}">
+      <label>Title</label>
+      <input type="text" class="form-control " id="lead-title" placeholder="Title" value="{{lead.title}}">
+      <span class="help-block">{{errorMessage 'title'}}</span>
+    </div>
+
+    <div class="form-group {{errorClass 'clientEmail'}}">
+      <label>Client Email</label>
+      <input type="email" class="form-control " id="lead-clientEmail" placeholder="Client Email" value="{{lead.clientEmail}}">
+      <span class="help-block">{{errorMessage 'clientEmail'}}</span>
+    </div>
+
+    <div class="form-group {{errorClass 'propertyInfo'}}">
+      <label>Property Info</label>
+      <textarea class="form-control" id="lead-propertyInfo" rows="6" value="{{lead.propertyInfo}}"></textarea>
+      <span class="help-block">{{errorMessage 'propertyInfo'}}</span>
+    </div>
+  	
+  	<div class="form-group {{errorClass 'category'}} span10">
+      <label>Category</label>
+      <select class="form-control"  id="lead-category" default-val="{{lead.category}}">
+        <option value="">Select Category</option>
+      	<option value="Sale">Sale</option>
+      	<option value="Lease" >Lease</option>
+      </select>
+      <span class="help-block">{{errorMessage 'category'}}</span>
+    </div>
+
+    <div class="form-group {{errorClass 'type'}}">
+      <label>Type</label>
+      <select class="form-control" id="lead-type" default-val="{{lead.type}}">
+        <option value="">Select Type</option>
+      	<option value="Buy">Buy</option>
+      	<option value="Sell">Sell</option>
+      </select>
+      <span class="help-block">{{errorMessage 'type'}}</span>
+    </div>
+
+    <div class="form-group handshake-field">
+      <label class="checkbox">
+        <input type="checkbox" id="lead-handshake"  default-val="{{lead.handshake}}" />Handshake
+      </label>
+    </div>
+
+    <input type="submit" value="submit" class="btn btn-success"/>
+  </form>
+  </div>
+</template>

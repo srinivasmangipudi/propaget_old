@@ -6,3 +6,6 @@ Agents.permit(['insert', 'update']).ifLoggedIn().apply();
 
 // Any client may insert, update, or remove an client if logged in
 Clients.permit(['insert', 'update']).ifLoggedIn().apply();
+
+Leads.permit(['insert', 'update']).ifLoggedIn().apply();
+

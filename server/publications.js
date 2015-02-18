@@ -153,14 +153,15 @@ Meteor.publish('singleLead', function(id) {
 });
 
 //All leads for an agent
-Meteor.publish('leads', function(agentId, options) {
-	check(agentId, String);
+Meteor.publish('leads', function(agentId) {
+	/*check(agentId, String);
 	check(options, {
 		sort: Object,
 		limit: Number
-	});
+	});*/
 
-	return Leads.find({agentId: agentId}, options);
+	// return Leads.find({agentId: agentId}, options);
+	return Leads.find({userID: agentId});
 });
 
 //get single offer by id
