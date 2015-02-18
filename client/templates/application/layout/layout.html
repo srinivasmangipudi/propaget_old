@@ -2,6 +2,7 @@
 	<div class="container">
 		{{> header}}
 		{{> meteorErrors}}
+		<div class="clearfix">{{#if successMessage}}<div class="alert alert-success" role="alert">{{successMessage}}</div>{{/if}}</div>
 		<div id="main" class="row-fluid page-wrap">
 			{{> yield}}
 		</div>
