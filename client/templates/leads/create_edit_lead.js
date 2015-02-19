@@ -70,6 +70,43 @@ Template.createEditLead.events({
 				$('#closeCreatelead').hide();
 				clearFeildValues();
 			});
+
+			/* Check if client is registered with the email id if not then create user */
+			Meteor.call('CheckUserExistsByEmail', LeadData.clientEmail, function(error, userObj) {
+				if(error)
+					return throwError(error.reason);
+
+				/* Send email notification to client for new lead is created */
+				if(userObj) {
+					templateName = "EmailNotification";
+					
+					emailData ={
+						userObj: userObj,
+						leadTitle : $('#lead-title').val()
+					};
+
+					/* Pass parameter to template and fetch whole html data */
+					var html= Blaze.toHTML(Blaze.With(emailData, function() { return Template.EmailNotification; })); 
+
+					var emailObj = {
+						to : LeadData.clientEmail,
+						from: 'komal.savla@focalworks.in',
+						subject: 'New lead is created',
+						body: html,
+					};
+
+					Meteor.call('sendEmailNotification', emailObj, function(error, userObj) {
+						
+					});
+				}else {
+					/* Create new client user */
+					Meteor.call('CreateClientUser', LeadData.clientEmail, function(error, userObj) {
+						if(error)
+							return throwError(error.reason);
+					});
+				}
+			});
+
     }
 		
 	},
