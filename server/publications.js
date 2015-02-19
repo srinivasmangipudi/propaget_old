@@ -84,6 +84,11 @@ Meteor.publish('singleUser', function(id) {
 												"services.google.picture": 1}});
 });
 
+Meteor.publish('singleUserByEmail', function(email) {
+	// check(email, String);
+	return Meteor.users.find({ emails: { $elemMatch: { address: email } } });
+});
+
 Meteor.publish(null, function () {
 	return Meteor.roles.find({});
 });

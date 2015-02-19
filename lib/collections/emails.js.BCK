@@ -1,0 +1,11 @@
+Meteor.methods({
+	sendEmailNotification : function (emailData) {
+	  Email.send({
+	    from: emailData.from,
+	    to: emailData.to,
+	    replyTo: emailData.from || undefined,
+	    subject: emailData.subject,
+	    text: emailData.body
+	  });
+	}
+});
