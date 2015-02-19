@@ -2,5 +2,9 @@
     "facebook" : {
         "clientId": "885549378174272",
         "secret": "27e1ab2c6d555a4967639bd3bcde4530"
+    },
+    "google": {
+    	"clientId": "692161896024-47q718tvf7e8hmjlctoqqfv6v3llt9ps.apps.googleusercontent.com",
+    	"secret": "AnatoUCVB6arWx50PMTfGRXd"
     }
 }

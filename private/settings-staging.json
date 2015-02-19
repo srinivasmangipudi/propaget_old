@@ -1,0 +1,10 @@
+{
+    "facebook" : {
+        "clientId": "893832567345953",
+        "secret": "3b17a339b303ff88a41af120356eeb98",
+    },
+    "google": {
+    	"clientId": "692161896024-lu363abpieo3sgb8inosfskb942jbbts.apps.googleusercontent.com",
+    	"secret": "CaxotWnBmG3ZYj3UCrRlZlPl",
+    }
+}
