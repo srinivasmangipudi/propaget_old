@@ -6,5 +6,9 @@
     "google": {
     	"clientId": "692161896024-47q718tvf7e8hmjlctoqqfv6v3llt9ps.apps.googleusercontent.com",
     	"secret": "AnatoUCVB6arWx50PMTfGRXd"
+    },
+    "twitter": {
+    	"clientId": "9JT2Fmxzb9Q49SRXRAYTra7Zz",
+    	"secret": "MzCeF3Yqo5vYzLQcdzD9Jm99fuyPoy3kzjI9AphATqu81FCkVW"    	
     }
 }
