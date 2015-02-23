@@ -5,13 +5,13 @@
 			<div>
 				<p style="color: #3CAB78; text-align: center; font-size: xx-large;">Dashboard</p>
 				{{#if isInRole 'Agent'}}
-					<p>AgentDetails:</p>
+					<p><b>AgentDetails:</b></p>
 					<p>{{agent.experience}}</p>
 					<p>{{agent.summary}}</p>
 						
 				{{/if}}
 				{{#if isInRole 'Client'}}
-					<p>ClientDetails:</p>
+					<p><b>ClientDetails:</b></p>
 					<p>{{client.information}}</p>
 				{{/if}}
 			</div>
