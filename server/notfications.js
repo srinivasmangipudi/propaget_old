@@ -31,6 +31,26 @@ Meteor.methods({
       default:
         return false;
     }
+  },
+  sendSMSNotification: function (toPhoneNum, smsMessage) {
+    /* need to add the account details of twilio */
+    var AccountSID = '';
+    var AuthToken = '';
+    var fromMobileNumber = '+13202458411';
+
+    twilio = Twilio(AccountSID, AuthToken);
+    twilio.sendSms({
+      to:toPhoneNum, // Any number Twilio can deliver to
+      from: fromMobileNumber, // A number you bought from Twilio and can use for outbound communication
+      body: smsMessage // body of the SMS message
+    }, function(err, responseData) { //this function is executed when a response is received from Twilio
+      if (!err) {
+        console.log(responseData.from);
+        console.log(responseData.body);
+      } else {
+        console.log(err);
+      }
+    });
   }
 });
 
