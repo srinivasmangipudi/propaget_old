@@ -33,7 +33,7 @@ handlebars@1.0.2
 html-tools@1.0.3
 htmljs@1.0.3
 http@1.0.10
-ian:accounts-ui-bootstrap-3@1.2.33
+ian:accounts-ui-bootstrap-3@1.2.31
 id-map@1.0.2
 iron:controller@1.0.7
 iron:core@1.0.7
@@ -72,7 +72,7 @@ observe-sequence@1.0.4
 ongoworks:security@1.0.1
 ordered-dict@1.0.2
 raix:eventemitter@0.1.1
-raix:push@2.6.1
+raix:push@2.6.0
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4

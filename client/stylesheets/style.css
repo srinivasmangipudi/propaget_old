@@ -501,3 +501,436 @@ body {
  margin-bottom: 5px;
  pointer-events: auto;
 }
+
+/**
+ * ionic-lists
+ * --------------------------------------------------
+ */
+.ionic-list {
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 0;
+  margin-bottom: 20px; }
+
+.ionic-list:last-child {
+  margin-bottom: 0px; }
+  .ionic-list:last-child.card {
+    margin-bottom: 40px; }
+/**
+ * ionic_items
+ * --------------------------------------------------
+ */
+.ionic_item {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  padding: 16px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px; }
+  .ionic_item h2 {
+    margin: 0 0 2px 0;
+    font-size: 16px;
+    font-weight: normal; }
+  .ionic_item h3 {
+    margin: 0 0 4px 0;
+    font-size: 14px; }
+  .ionic_item h4 {
+    margin: 0 0 4px 0;
+    font-size: 12px; }
+  .ionic_item h5, .ionic_item h6 {
+    margin: 0 0 3px 0;
+    font-size: 10px; }
+  .ionic_item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 2px; }
+  .ionic_item h1:last-child, .ionic_item h2:last-child, .ionic_item h3:last-child, .ionic_item h4:last-child, .ionic_item h5:last-child, .ionic_item h6:last-child, .ionic_item p:last-child {
+    margin-bottom: 0; }
+  .ionic_item .badge {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 32px; }
+  .ionic_item.item-button-right .badge {
+    right: 67px; }
+  .ionic_item.item-divider .badge {
+    top: 8px; }
+  .ionic_item .badge + .badge {
+    margin-right: 5px; }
+  .ionic_item.item-light {
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444; }
+  .ionic_item.item-stable {
+    border-color: #b2b2b2;
+    background-color: #f8f8f8;
+    color: #444; }
+  .ionic_item.item-positive {
+    border-color: #0c63ee;
+    background-color: #387ef5;
+    color: #fff; }
+  .ionic_item.item-calm {
+    border-color: #0a9ec7;
+    background-color: #11c1f3;
+    color: #fff; }
+  .ionic_item.item-assertive {
+    border-color: #e42012;
+    background-color: #ef473a;
+    color: #fff; }
+  .ionic_item.item-balanced {
+    border-color: #28a54c;
+    background-color: #33cd5f;
+    color: #fff; }
+  .ionic_item.item-energized {
+    border-color: #e6b400;
+    background-color: #ffc900;
+    color: #fff; }
+  .ionic_item.item-royal {
+    border-color: #6b46e5;
+    background-color: #886aea;
+    color: #fff; }
+  .ionic_item.item-dark {
+    border-color: #111;
+    background-color: #444;
+    color: #fff; }
+  .ionic_item[ng-click]:hover {
+    cursor: pointer; }
+
+.ionic-list-borderless .ionic_item, .item-borderless {
+  border-width: 0; }
+
+.ionic_item.active, .ionic_item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .ionic_item .item-content.active, .ionic_item .item-content.activated {
+  border-color: #ccc;
+  background-color: #D9D9D9; }
+  .ionic_item.active.item-light, .ionic_item.activated.item-light, .item-complex.active .item-content.item-light, .item-complex.activated .item-content.item-light, .ionic_item .item-content.active.item-light, .ionic_item .item-content.activated.item-light {
+    border-color: #ccc;
+    background-color: #fafafa; }
+  .ionic_item.active.item-stable, .ionic_item.activated.item-stable, .item-complex.active .item-content.item-stable, .item-complex.activated .item-content.item-stable, .ionic_item .item-content.active.item-stable, .ionic_item .item-content.activated.item-stable {
+    border-color: #a2a2a2;
+    background-color: #e5e5e5; }
+  .ionic_item.active.item-positive, .ionic_item.activated.item-positive, .item-complex.active .item-content.item-positive, .item-complex.activated .item-content.item-positive, .ionic_item .item-content.active.item-positive, .ionic_item .item-content.activated.item-positive {
+    border-color: #0c63ee;
+    background-color: #0c63ee; }
+  .ionic_item.active.item-calm, .ionic_item.activated.item-calm, .item-complex.active .item-content.item-calm, .item-complex.activated .item-content.item-calm, .ionic_item .item-content.active.item-calm, .ionic_item .item-content.activated.item-calm {
+    border-color: #0a9ec7;
+    background-color: #0a9ec7; }
+  .ionic_item.active.item-assertive, .ionic_item.activated.item-assertive, .item-complex.active .item-content.item-assertive, .item-complex.activated .item-content.item-assertive, .ionic_item .item-content.active.item-assertive, .ionic_item .item-content.activated.item-assertive {
+    border-color: #e42012;
+    background-color: #e42012; }
+  .ionic_item.active.item-balanced, .ionic_item.activated.item-balanced, .item-complex.active .item-content.item-balanced, .item-complex.activated .item-content.item-balanced, .ionic_item .item-content.active.item-balanced, .ionic_item .item-content.activated.item-balanced {
+    border-color: #28a54c;
+    background-color: #28a54c; }
+  .ionic_item.active.item-energized, .ionic_item.activated.item-energized, .item-complex.active .item-content.item-energized, .item-complex.activated .item-content.item-energized, .ionic_item .item-content.active.item-energized, .ionic_item .item-content.activated.item-energized {
+    border-color: #e6b400;
+    background-color: #e6b400; }
+  .ionic_item.active.item-royal, .ionic_item.activated.item-royal, .item-complex.active .item-content.item-royal, .item-complex.activated .item-content.item-royal, .ionic_item .item-content.active.item-royal, .ionic_item .item-content.activated.item-royal {
+    border-color: #6b46e5;
+    background-color: #6b46e5; }
+  .ionic_item.active.item-dark, .ionic_item.activated.item-dark, .item-complex.active .item-content.item-dark, .item-complex.activated .item-content.item-dark, .ionic_item .item-content.active.item-dark, .ionic_item .item-content.activated.item-dark {
+    border-color: #000;
+    background-color: #262626; }
+
+.item, .ionic_item h1, .ionic_item h2, .ionic_item h3, .ionic_item h4, .ionic_item h5, .ionic_item h6, .ionic_item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+a.ionic_item {
+  color: inherit;
+  text-decoration: none; }
+  a.ionic_item:hover, a.ionic_item:focus {
+    text-decoration: none; }
+
+/**
+ * Checkbox
+ * --------------------------------------------------
+ */
+.checkbox {
+  position: relative;
+  display: inline-block;
+  padding: 7px 7px;
+  cursor: pointer; }
+  .checkbox input:before, .checkbox .checkbox-icon:before {
+    border-color: #ddd; }
+  .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+    background: #387ef5;
+    border-color: #387ef5; }
+
+.checkbox-light input:before, .checkbox-light .checkbox-icon:before {
+  border-color: #ddd; }
+.checkbox-light input:checked:before, .checkbox-light input:checked + .checkbox-icon:before {
+  background: #ddd;
+  border-color: #ddd; }
+
+.checkbox-stable input:before, .checkbox-stable .checkbox-icon:before {
+  border-color: #b2b2b2; }
+.checkbox-stable input:checked:before, .checkbox-stable input:checked + .checkbox-icon:before {
+  background: #b2b2b2;
+  border-color: #b2b2b2; }
+
+.checkbox-positive input:before, .checkbox-positive .checkbox-icon:before {
+  border-color: #387ef5; }
+.checkbox-positive input:checked:before, .checkbox-positive input:checked + .checkbox-icon:before {
+  background: #387ef5;
+  border-color: #387ef5; }
+
+.checkbox-calm input:before, .checkbox-calm .checkbox-icon:before {
+  border-color: #11c1f3; }
+.checkbox-calm input:checked:before, .checkbox-calm input:checked + .checkbox-icon:before {
+  background: #11c1f3;
+  border-color: #11c1f3; }
+
+.checkbox-assertive input:before, .checkbox-assertive .checkbox-icon:before {
+  border-color: #ef473a; }
+.checkbox-assertive input:checked:before, .checkbox-assertive input:checked + .checkbox-icon:before {
+  background: #ef473a;
+  border-color: #ef473a; }
+
+.checkbox-balanced input:before, .checkbox-balanced .checkbox-icon:before {
+  border-color: #33cd5f; }
+.checkbox-balanced input:checked:before, .checkbox-balanced input:checked + .checkbox-icon:before {
+  background: #33cd5f;
+  border-color: #33cd5f; }
+
+.checkbox-energized input:before, .checkbox-energized .checkbox-icon:before {
+  border-color: #ffc900; }
+.checkbox-energized input:checked:before, .checkbox-energized input:checked + .checkbox-icon:before {
+  background: #ffc900;
+  border-color: #ffc900; }
+
+.checkbox-royal input:before, .checkbox-royal .checkbox-icon:before {
+  border-color: #886aea; }
+.checkbox-royal input:checked:before, .checkbox-royal input:checked + .checkbox-icon:before {
+  background: #886aea;
+  border-color: #886aea; }
+
+.checkbox-dark input:before, .checkbox-dark .checkbox-icon:before {
+  border-color: #444; }
+.checkbox-dark input:checked:before, .checkbox-dark input:checked + .checkbox-icon:before {
+  background: #444;
+  border-color: #444; }
+
+.checkbox input:disabled:before, .checkbox input:disabled + .checkbox-icon:before {
+  border-color: #ddd; }
+
+.checkbox input:disabled:checked:before, .checkbox input:disabled:checked + .checkbox-icon:before {
+  background: #ddd; }
+
+.checkbox.checkbox-input-hidden input {
+  display: none !important; }
+
+.checkbox input, .checkbox-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none; }
+  .checkbox input:before, .checkbox-icon:before {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 28px;
+    background: #fff;
+    content: ' ';
+    -webkit-transition: background-color 20ms ease-in-out;
+    transition: background-color 20ms ease-in-out; }
+
+.checkbox input:checked:before, input:checked + .checkbox-icon:before {
+  border-width: 2px; }
+
+.checkbox input:after, .checkbox-icon:after {
+  -webkit-transition: opacity 0.05s ease-in-out;
+  transition: opacity 0.05s ease-in-out;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 33%;
+  left: 25%;
+  display: table;
+  width: 14px;
+  height: 6px;
+  border: 1px solid #fff;
+  border-top: 0;
+  border-right: 0;
+  content: ' ';
+  opacity: 0; }
+
+.platform-android .checkbox-platform input:before, .platform-android .checkbox-platform .checkbox-icon:before, .checkbox-square input:before, .checkbox-square .checkbox-icon:before {
+  border-radius: 2px;
+  width: 72%;
+  height: 72%;
+  margin-top: 14%;
+  margin-left: 14%;
+  border-width: 2px; }
+
+.platform-android .checkbox-platform input:after, .platform-android .checkbox-platform .checkbox-icon:after, .checkbox-square input:after, .checkbox-square .checkbox-icon:after {
+  border-width: 2px;
+  top: 19%;
+  left: 25%;
+  width: 13px;
+  height: 7px; }
+
+.grade-c .checkbox input:after, .grade-c .checkbox-icon:after {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  top: 3px;
+  left: 4px;
+  border: none;
+  color: #fff;
+  content: '\2713';
+  font-weight: bold;
+  font-size: 20px; }
+
+.checkbox input:checked:after, input:checked + .checkbox-icon:after {
+  opacity: 1; }
+
+.item-checkbox {
+  padding-left: 60px; }
+  .item-checkbox.active {
+    box-shadow: none; }
+
+.item-checkbox .checkbox {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  left: 8px;
+  z-index: 3;
+  margin-top: -21px; }
+
+.item-checkbox.item-checkbox-right {
+  padding-right: 60px;
+  padding-left: 16px; }
+
+.item-checkbox-right .checkbox input, .item-checkbox-right .checkbox-icon {
+  float: right; }    
+/**
+ * Toggle
+ * --------------------------------------------------
+ */
+.ionic_item-toggle {
+  pointer-events: none; }
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+  margin: -5px;
+  padding: 5px; }
+  .toggle input:checked + .track {
+    border-color: #387ef5;
+    background-color: #387ef5; }
+  .toggle.dragging .handle {
+    background-color: #f2f2f2 !important; }
+  .toggle.toggle-light input:checked + .track {
+    border-color: #ddd;
+    background-color: #ddd; }
+  .toggle.toggle-stable input:checked + .track {
+    border-color: #b2b2b2;
+    background-color: #b2b2b2; }
+  .toggle.toggle-positive input:checked + .track {
+    border-color: #387ef5;
+    background-color: #387ef5; }
+  .toggle.toggle-calm input:checked + .track {
+    border-color: #11c1f3;
+    background-color: #11c1f3; }
+  .toggle.toggle-assertive input:checked + .track {
+    border-color: #ef473a;
+    background-color: #ef473a; }
+  .toggle.toggle-balanced input:checked + .track {
+    border-color: #33cd5f;
+    background-color: #33cd5f; }
+  .toggle.toggle-energized input:checked + .track {
+    border-color: #ffc900;
+    background-color: #ffc900; }
+  .toggle.toggle-royal input:checked + .track {
+    border-color: #886aea;
+    background-color: #886aea; }
+  .toggle.toggle-dark input:checked + .track {
+    border-color: #444;
+    background-color: #444; }
+
+.toggle input {
+  display: none; }
+
+/* the track appearance when the toggle is "off" */
+.toggle .track {
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: background-color, border;
+  transition-property: background-color, border;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 54px;
+  height: 32px;
+  border: solid 2px #E5E5E5;
+  border-radius: 20px;
+  background-color: #E5E5E5;
+  content: ' ';
+  cursor: pointer;
+  pointer-events: none; }
+
+/* Fix to avoid background color bleeding */
+/* (occured on (at least) Android 4.2, Asus MeMO Pad HD7 ME173X) */
+.platform-android4_2 .toggle .track {
+  -webkit-background-clip: padding-box; }
+
+/* the handle (circle) thats inside the toggle's track area */
+/* also the handle's appearance when it is "off" */
+.toggle .handle {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  background-color: #fff;
+  top: 7px;
+  left: 7px; }
+  .toggle .handle:before {
+    position: absolute;
+    top: -4px;
+    left: -22px;
+    padding: 19px 35px;
+    content: " "; }
+
+.toggle input:checked + .track .handle {
+  -webkit-transform: translate3d(22px, 0, 0);
+  transform: translate3d(22px, 0, 0);
+  background-color: #fff; }
+
+.ionic_item-toggle.active {
+  box-shadow: none; }
+
+.ionic_item-toggle, .ionic_item-toggle.item-complex .item-content {
+  padding-right: 102px; }
+
+.ionic_item-toggle.item-complex {
+  padding-right: 0; }
+
+.ionic_item-toggle .toggle {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  z-index: 3; }
+
+.toggle input:disabled + .track {
+  opacity: 0.6; }

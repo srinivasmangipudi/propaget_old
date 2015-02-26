@@ -12,19 +12,21 @@
     	</div>
     	<div>
     		<h3>Contact List</h3>
-    		<table class="table table-bordered">
-    			<tr>
-    				<td>Select</td>
-    				<td>Name</td>
-    			</tr>
+
+    		<ul class="ionic-list">
     			{{#each contactslist}}
-    			<tr>
-    				<td><input type='checkbox' id='contact-{{dispName}}' value="{{dispName}}" name="contact"/></td>
-    				<td>{{dispName}}</td>
-    			</tr>
-    			{{/each}}
-    		</table>
+  				<li class="ionic_item ionic_item-toggle">{{dispName}}
+     				<label class="toggle toggle-positive">
+	     				<input type="checkbox" id='contact-{{dispName}}' value="{{dispName}}" name="contact"/>
+						<div class="track">
+						    <div class="handle"></div>
+						</div>
+				    </label>
+				</li>
+				{{/each}}
+			</ul>
     	</div>
+    	<br>
     	<input type="submit" value="submit" class="btn btn-success"/>
     </form>
     </div>
