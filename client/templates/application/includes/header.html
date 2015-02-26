@@ -24,19 +24,16 @@
 				<ul class="nav navbar-nav">
 					{{#if currentUser}}		
 						<li class="{{activeRouteClass 'newLeads'}}">
-							<a href="/leadListing">Leads</a>
+							<a href="{{pathFor 'newLeads'}}">Leads</a>
 						</li>
-						<li class="">
-							<a href="/distributionListing">Distribution List</a>
+						<li class="{{activeRouteClass 'distributionListing'}}">
+							<a href="{{pathFor 'distributionListing'}}">DistributionLists</a>
 						</li>
 						<li class="">
 							<a href="#">Offers</a>
 						</li>
 						<li class="{{activeRouteClass ''}}">
 							<a href="#">Deals</a>
-						</li>
-						<li class="{{activeRouteClass 'distributionLists'}}">
-							<a href="{{pathFor 'distributionLists'}}">Distribution Lists</a>
 						</li>
 						<li class="{{activeRouteClass ''}}">
 							<a href="#">My Profile</a>
