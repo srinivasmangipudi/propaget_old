@@ -1,0 +1,31 @@
+<template name="distributionsAdd">
+	{{#if isLoading}}
+		{{> loading}}
+	{{/if}}
+
+	<div>
+	<form id="add-distribution-form">
+  		<div class="form-group {{errorClass 'name'}}">
+      		<label>Distribution Name:</label>
+      		<input type="text" class="form-control" id="distribution-name" placeholder="Distribution Name" >
+      		<span class="help-block">{{errorMessage 'name'}}</span>
+    	</div>
+    	<div>
+    		<h3>Contact List</h3>
+    		<table class="table table-bordered">
+    			<tr>
+    				<td>Select</td>
+    				<td>Name</td>
+    			</tr>
+    			{{#each contactslist}}
+    			<tr>
+    				<td><input type='checkbox' id='contact-{{dispName}}' value="{{dispName}}" name="contact"/></td>
+    				<td>{{dispName}}</td>
+    			</tr>
+    			{{/each}}
+    		</table>
+    	</div>
+    	<input type="submit" value="submit" class="btn btn-success"/>
+    </form>
+    </div>
+</template>

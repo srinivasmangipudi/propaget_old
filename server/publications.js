@@ -134,6 +134,7 @@ Meteor.publish('agentContacts', function(agentId, options) {
 	return AgentContacts.find({agentId: agentId}, options);
 });
 
+/*
 //get single DistributionList by id
 Meteor.publish('singleDistributionList', function(id) {
 	check(id, String);
@@ -150,6 +151,7 @@ Meteor.publish('distributionLists', function(agentId, options) {
 
 	return DistributionLists.find({agentId: agentId}, options);
 });
+*/
 
 //get single lead by id
 Meteor.publish('singleLead', function(id) {
@@ -219,3 +221,19 @@ Meteor.publish('deals', function(agentId, options) {
 	return Deals.find({agentId: agentId}, options);
 });
 
+
+//All distributionslist for an agent
+Meteor.publish('distributionslist', function(agentId) {
+	/*check(agentId, String);
+	check(options, {
+		sort: Object,
+		limit: Number
+	});*/
+
+	// return DistributionLists.find({agentUserId: agentId}, options);
+	return DistributionList.find({agentUserId: agentId});
+});
+
+Meteor.publish('contactslist', function(agentId) {
+	return ContactsList.find();
+});
