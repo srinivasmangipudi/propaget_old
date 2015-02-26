@@ -1,0 +1,58 @@
+<template name="distributionListing">
+
+<button id="adddistribution" class="btn btn-primary" style="display:none;">Add New Distribution</button>
+
+{{#if isLoading}}
+	{{> loading}}
+{{/if}}
+
+<h1>Distribution List</h1>
+	<table class="table table-bordered">
+    <thead>
+    	<tr>
+    		<th>Name</th>
+      		<th>Contact Name</th>
+      		<th>Date</th>
+      		<th>Delete</th>
+    	</tr>
+    </thead>
+    		
+	<tbody>
+	{{#each distributions}}
+      <tr>
+      	<td>{{name}}</td>
+      	<td>{{#each agentContacts}} {{name}} , {{/each}}</td>
+        <td>{{createdAt}}</td>
+        <td>
+        	<div class="dilemma-action-buttons">
+				<a href="#" class="edit btn btn-default" style="color:#33CCFF;" title="Delete" data-toggle="modal" data-target="#mydistributionModal-{{_id}}">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+				</a>
+			</div>
+       		{{ > distributionconfirmationModal content="This action cannot be undone. It will delete the lead once you click yes" title="Are you sure?" id=_id}}
+		</td>
+	</tr>
+    {{/each}}
+   	</tbody>
+  </table>
+</template>
+
+<template name="distributionconfirmationModal">
+<div class="modal fade" id="mydistributionModal-{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+      </div>
+      <div class="modal-body">
+        {{content}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default delete-item" data-delete-id="{{id}}">Yes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
